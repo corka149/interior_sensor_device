@@ -4,7 +4,7 @@ setup(
     name='interior_sensor_device',
     version='1.0.0',
     packages=['interior_sensor_device'],
-    url='',
+    url='https://github.com/corka149/interior_sensor_device',
     license='MIT',
     author='corka',
     author_email='corka149@mailbox.org',
