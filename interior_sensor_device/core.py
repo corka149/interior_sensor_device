@@ -1,6 +1,7 @@
-from . import temperature_sensor
 from pyjarvis.core import sensor_client
 from pyjarvis.model import Measurement, SensorDevice
+
+from . import temperature_sensor
 
 
 class NoDeviceFound(Exception):
@@ -21,7 +22,7 @@ def nested_send_movement_detected(request_config, device_id):
     :param device_id: Will be put into the lambda
     :return:
     """
-    return lambda: send_movement_detected(request_config, device_id)
+    return lambda _channel: send_movement_detected(request_config, device_id)
 
 
 def send_movement_detected(request_config, device_id):
