@@ -7,6 +7,9 @@ class NoExternalIdProvidedError(Exception):
 
 
 class SensorConfig:
+    """
+    Encapsulated all necessary configurations for the sensor.
+    """
 
     def __init__(self, humidity_and_temp_pin, movement_detector_pin, delay_in_seconds, external_id, request_config):
         self.humidity_and_temp_pin = humidity_and_temp_pin
@@ -17,6 +20,10 @@ class SensorConfig:
 
 
 def get_config():
+    """
+    Helps extracting configurations from CLI
+    :return: SensorConfig
+    """
     args = sys.argv
     ht_pin = int(__find_arg__("humidity_and_temp_pin", 4, args))
     md_pin = int(__find_arg__("movement_detector_pin", 17, args))
