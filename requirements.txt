@@ -1,3 +1,4 @@
 Adafruit-DHT
 git+https://github.com/corka149/pyjarvis.git
 RPi.GPIO
+python-daemon

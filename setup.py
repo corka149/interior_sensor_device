@@ -2,7 +2,7 @@ from setuptools import setup
 
 setup(
     name='interior_sensor_device',
-    version='1.0.1',
+    version='1.1.0',
     packages=['interior_sensor_device'],
     url='https://github.com/corka149/interior_sensor_device',
     license='MIT',

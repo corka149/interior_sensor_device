@@ -1,3 +1,5 @@
+import daemon
+
 from time import sleep
 from . import config
 from interior_sensor_device.config import SensorConfig
@@ -18,4 +20,5 @@ def main(sensor_config: SensorConfig, sleep_in_secs=5):
 
 if __name__ == '__main__':
     sensor_conf = config.get_config()
-    main(sensor_conf)
+    with daemon.DaemonContext():
+        main(sensor_conf)
