@@ -1,0 +1,18 @@
+[Unit]
+Description=Sensor for measuring temperature and detecting motions
+After=syslog.target
+
+[Service]
+Type=simple
+User=interior_sensor_device
+Group=interior_sensor_device
+WorkingDirectory=/etc/interior_sensor_device
+ExecStart=/etc/interior_sensor_device/start.py
+SyslogIdentifier=interior_sensor_device
+StandardOutput=syslog
+StandardError=syslog
+Restart=always
+RestartSec=3
+
+[Install]
+WantedBy=multi-user.target
