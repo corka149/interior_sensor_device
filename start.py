@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+
 import sys
 from interior_sensor_device import cli, config
 

@@ -4,8 +4,8 @@ After=syslog.target
 
 [Service]
 Type=simple
-User=interior_sensor_device
-Group=interior_sensor_device
+User=interior_sensor_device_user
+Group=interior_sensor_device_user
 WorkingDirectory=/etc/interior_sensor_device
 ExecStart=/etc/interior_sensor_device/start.py
 SyslogIdentifier=interior_sensor_device
